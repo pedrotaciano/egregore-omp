@@ -1,0 +1,29 @@
+{
+  "name": "egregore-omp",
+  "version": "0.1.0",
+  "description": "Run an Egregore instance's Pi runtime inside omp (oh-my-pi).",
+  "license": "MIT",
+  "author": "Pedro Taciano <pedrotmonte@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrotaciano/egregore-omp.git"
+  },
+  "type": "module",
+  "bin": {
+    "egregore-omp": "bin/egregore-omp.mjs"
+  },
+  "files": [
+    "bin",
+    "template"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "egregore",
+    "omp",
+    "oh-my-pi",
+    "pi",
+    "coding-agent"
+  ]
+}
