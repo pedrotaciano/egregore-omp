@@ -9,8 +9,10 @@ Run an [Egregore](https://github.com/egregore-labs/egregore) instance inside [om
 From inside an instance, or anywhere to cover every instance in `~/.egregore/instances.json`:
 
 ```sh
-npx -y github:pedrotaciano/egregore-omp
+npx --allow-git=all -y github:pedrotaciano/egregore-omp
 ```
+
+npm 12 refuses git packages unless `--allow-git` is given; `bunx github:pedrotaciano/egregore-omp` works too.
 
 Then run `omp` in the instance directory. The status line shows `Egregore · N workflows` and the team card appears on startup.
 
@@ -40,9 +42,9 @@ omp already handles the rest: it rewrites the `@earendil-works/*` imports to its
 ## Commands
 
 ```sh
-npx -y github:pedrotaciano/egregore-omp status
-npx -y github:pedrotaciano/egregore-omp uninstall
-npx -y github:pedrotaciano/egregore-omp install --force <instance-path>
+npx --allow-git=all -y github:pedrotaciano/egregore-omp status
+npx --allow-git=all -y github:pedrotaciano/egregore-omp uninstall
+npx --allow-git=all -y github:pedrotaciano/egregore-omp install --force <instance-path>
 ```
 
 `install` never overwrites a `.omp/extensions/egregore.ts` or `.omp/APPEND_SYSTEM.md` it did not create; `--force` replaces them. `uninstall` removes only its own files.
